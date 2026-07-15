@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/sync-rsvp?secret=REPLACE_WITH_SYNC_SECRET",
+      "schedule": "*/15 * * * *"
+    }
+  ]
+}

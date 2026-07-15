@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #faf7f1;
+  --color-paper-soft: #f2ede3;
+  --color-ink: #24211d;
+  --color-ink-soft: #55504a;
+  --color-border: #e3dcce;
+
+  --color-accent: #a8583c;
+  --color-accent-soft: #f1e0d6;
+  --color-sage: #5c6f5d;
+  --color-sage-soft: #e3e8dd;
+
+  --color-danger: #a8583c;
+  --color-neutral-badge: #eeeae2;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-paper-soft: var(--color-paper-soft);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-sage: var(--color-sage);
+  --color-sage-soft: var(--color-sage-soft);
+  --color-danger: var(--color-danger);
+  --color-neutral-badge: var(--color-neutral-badge);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-accent-soft);
+}
+
+/* Scrollbar sutil para las tablas con overflow horizontal */
+.scroll-thin::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 9999px;
+}
