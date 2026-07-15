@@ -78,7 +78,7 @@ export function EditableTable<T extends { id: string }>({
   }
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+    <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
       <div className="scroll-thin overflow-x-auto">
         <table className="w-full min-w-[760px] border-collapse text-sm">
           <thead>
@@ -105,7 +105,7 @@ export function EditableTable<T extends { id: string }>({
                 {columns.map((col, i) => {
                   const value = (row as unknown as Record<string, unknown>)[col.key];
                   const isEditing = editingCell?.rowId === row.id && editingCell?.key === col.key;
-                  const stickyCls = i === 0 ? 'sticky left-0 z-10 bg-white group-hover:bg-[#faf7f1]' : '';
+                  const stickyCls = i === 0 ? 'sticky left-0 z-10 bg-surface group-hover:bg-[var(--color-paper-soft)]' : '';
 
                   if (col.type === 'checkbox') {
                     return (
@@ -138,7 +138,7 @@ export function EditableTable<T extends { id: string }>({
                             defaultValue={String(value ?? '')}
                             onChange={(e) => commitEdit(row.id, col, e.target.value)}
                             onBlur={() => setEditingCell(null)}
-                            className="w-full rounded-lg border border-border bg-white px-2 py-1.5 text-sm outline-none focus:border-accent"
+                            className="w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-sm outline-none focus:border-accent"
                           >
                             <option value="">—</option>
                             {col.options?.map((opt) => (
@@ -174,7 +174,7 @@ export function EditableTable<T extends { id: string }>({
                             if (e.key === 'Enter') (e.target as HTMLInputElement).blur();
                             if (e.key === 'Escape') setEditingCell(null);
                           }}
-                          className="w-full rounded-lg border border-border bg-white px-2 py-1.5 text-sm outline-none focus:border-accent"
+                          className="w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-sm outline-none focus:border-accent"
                         />
                       </td>
                     );
@@ -224,12 +224,12 @@ export function EditableTable<T extends { id: string }>({
           <tfoot>
             <tr className="border-t border-border bg-paper-soft/40">
               {columns.map((col, i) => (
-                <td key={col.key} className={`px-2 py-2 ${i === 0 ? 'sticky left-0 z-10 bg-[#f7f4ee]' : ''}`}>
+                <td key={col.key} className={`px-2 py-2 ${i === 0 ? 'sticky left-0 z-10 bg-[var(--color-paper-soft)]' : ''}`}>
                   {col.type === 'computed' ? null : col.type === 'checkbox' ? null : col.type === 'select' ? (
                     <select
                       value={newRow[col.key] ?? ''}
                       onChange={(e) => setNewRow((prev) => ({ ...prev, [col.key]: e.target.value }))}
-                      className="w-full rounded-lg border border-border bg-white px-2 py-1.5 text-sm outline-none focus:border-accent"
+                      className="w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-sm outline-none focus:border-accent"
                     >
                       <option value="">—</option>
                       {col.options?.map((opt) => (
@@ -247,7 +247,7 @@ export function EditableTable<T extends { id: string }>({
                       onKeyDown={(e) => {
                         if (e.key === 'Enter') submitNewRow();
                       }}
-                      className="w-full rounded-lg border border-border bg-white px-2 py-1.5 text-sm outline-none focus:border-accent"
+                      className="w-full rounded-lg border border-border bg-surface px-2 py-1.5 text-sm outline-none focus:border-accent"
                     />
                   )}
                 </td>

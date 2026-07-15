@@ -1,7 +1,7 @@
 export function PageHeader({ title, subtitle }: { title: string; subtitle?: string }) {
   return (
     <div className="mb-6">
-      <h1 className="font-display text-2xl md:text-3xl">{title}</h1>
+      <h1 className="font-display font-medium text-2xl md:text-3xl">{title}</h1>
       {subtitle && <p className="mt-1 text-sm text-ink-soft">{subtitle}</p>}
     </div>
   );

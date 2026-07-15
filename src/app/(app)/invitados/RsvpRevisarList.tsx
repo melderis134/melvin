@@ -24,7 +24,7 @@ function RsvpCard({ rsvp, guests }: { rsvp: RsvpRevisarRow; guests: InvitadoRow[
   }
 
   return (
-    <div className="rounded-2xl border border-border bg-white p-5 shadow-sm">
+    <div className="rounded-2xl border border-border bg-surface p-5 shadow-sm">
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div>
           <p className="font-medium text-ink">{rsvp.nombre_recibido}</p>
@@ -92,7 +92,7 @@ function RsvpCard({ rsvp, guests }: { rsvp: RsvpRevisarRow; guests: InvitadoRow[
 export function RsvpRevisarList({ rows, guests }: { rows: RsvpRevisarRow[]; guests: InvitadoRow[] }) {
   if (rows.length === 0) {
     return (
-      <div className="rounded-2xl border border-border bg-white p-10 text-center text-sm text-ink-soft shadow-sm">
+      <div className="rounded-2xl border border-border bg-surface p-10 text-center text-sm text-ink-soft shadow-sm">
         No hay confirmaciones pendientes de revisar. 🎉
       </div>
     );

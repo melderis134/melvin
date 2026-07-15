@@ -66,7 +66,7 @@ export function InspoUploader() {
         uploadFiles(e.dataTransfer.files);
       }}
       className={`mb-6 flex flex-col items-center gap-3 rounded-2xl border-2 border-dashed p-6 text-center transition sm:flex-row sm:justify-between sm:text-left ${
-        dragOver ? 'border-accent bg-accent-soft/40' : 'border-border bg-white'
+        dragOver ? 'border-accent bg-accent-soft/40' : 'border-border bg-surface'
       }`}
     >
       <div>
@@ -80,7 +80,7 @@ export function InspoUploader() {
         <select
           value={categoria}
           onChange={(e) => setCategoria(e.target.value as CategoriaInspo)}
-          className="rounded-lg border border-border bg-white px-2.5 py-2 text-sm outline-none focus:border-accent"
+          className="rounded-lg border border-border bg-surface px-2.5 py-2 text-sm outline-none focus:border-accent"
         >
           {CATEGORIA_OPTIONS.map((c) => (
             <option key={c} value={c}>

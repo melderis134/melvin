@@ -39,7 +39,7 @@ function InspoCard({ item }: { item: InspoRow }) {
   }
 
   return (
-    <div className="group mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+    <div className="group mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
       <div className="relative">
         {/* Fotos suben a Supabase Storage con URLs arbitrarias; usamos <img> para evitar configurar dominios remotos */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -96,7 +96,7 @@ export function InspoGrid({ items }: { items: InspoRow[] }) {
 
   if (items.length === 0) {
     return (
-      <div className="rounded-2xl border border-border bg-white p-10 text-center text-sm text-ink-soft shadow-sm">
+      <div className="rounded-2xl border border-border bg-surface p-10 text-center text-sm text-ink-soft shadow-sm">
         Todavía no subiste fotos de inspiración.
       </div>
     );
@@ -108,7 +108,7 @@ export function InspoGrid({ items }: { items: InspoRow[] }) {
         <button
           onClick={() => setFilter(null)}
           className={`rounded-full border px-3 py-1.5 text-xs font-medium transition ${
-            filter === null ? 'border-ink bg-ink text-paper' : 'border-border bg-white text-ink-soft hover:bg-paper-soft'
+            filter === null ? 'border-ink bg-ink text-paper' : 'border-border bg-surface text-ink-soft hover:bg-paper-soft'
           }`}
         >
           Todas
@@ -118,7 +118,7 @@ export function InspoGrid({ items }: { items: InspoRow[] }) {
             key={c}
             onClick={() => setFilter(filter === c ? null : c)}
             className={`rounded-full border px-3 py-1.5 text-xs font-medium transition ${
-              filter === c ? 'border-ink bg-ink text-paper' : 'border-border bg-white text-ink-soft hover:bg-paper-soft'
+              filter === c ? 'border-ink bg-ink text-paper' : 'border-border bg-surface text-ink-soft hover:bg-paper-soft'
             }`}
           >
             {c}

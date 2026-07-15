@@ -11,10 +11,10 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <p className="text-xs tracking-[0.2em] text-ink-soft uppercase">Meli &amp; Kev</p>
-          <h1 className="mt-2 font-display text-3xl">10.10.2026</h1>
+          <h1 className="mt-2 font-display font-medium text-3xl">10.10.2026</h1>
         </div>
 
-        <form action={formAction} className="space-y-4 rounded-2xl border border-border bg-white/60 p-6 shadow-sm">
+        <form action={formAction} className="space-y-4 rounded-2xl border border-border bg-surface/60 p-6 shadow-sm">
           <div>
             <label htmlFor="password" className="mb-1.5 block text-sm text-ink-soft">
               Contraseña
@@ -25,7 +25,7 @@ export default function LoginPage() {
               type="password"
               autoFocus
               required
-              className="w-full rounded-lg border border-border bg-white px-3 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent-soft"
+              className="w-full rounded-lg border border-border bg-surface px-3 py-2.5 text-ink outline-none transition focus:border-accent focus:ring-2 focus:ring-accent-soft"
             />
           </div>
 

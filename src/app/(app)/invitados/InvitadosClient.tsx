@@ -79,7 +79,7 @@ export function InvitadosClient({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Buscar por nombre…"
-              className="w-full max-w-xs rounded-lg border border-border bg-white px-3 py-2 text-sm outline-none focus:border-accent"
+              className="w-full max-w-xs rounded-lg border border-border bg-surface px-3 py-2 text-sm outline-none focus:border-accent"
             />
             <div className="flex flex-wrap gap-1.5">
               {(['Invitado', 'Confirmado', 'No asiste'] as const).map((estado) => (
@@ -89,7 +89,7 @@ export function InvitadosClient({
                   className={`rounded-full border px-3 py-1.5 text-xs font-medium transition ${
                     estadoFilter === estado
                       ? 'border-ink bg-ink text-paper'
-                      : 'border-border bg-white text-ink-soft hover:bg-paper-soft'
+                      : 'border-border bg-surface text-ink-soft hover:bg-paper-soft'
                   }`}
                 >
                   {estado}

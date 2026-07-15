@@ -46,7 +46,7 @@ function Brand() {
   return (
     <div className="px-5 pt-6 pb-4">
       <p className="text-[11px] tracking-[0.2em] text-ink-soft uppercase">Meli &amp; Kev</p>
-      <p className="mt-0.5 font-display text-xl">10 de octubre, 2026</p>
+      <p className="mt-0.5 font-display font-medium text-xl">10 de octubre, 2026</p>
     </div>
   );
 }
@@ -60,7 +60,7 @@ export function Sidebar() {
       <header className="sticky top-0 z-30 flex items-center justify-between border-b border-border bg-paper/95 px-4 py-3 backdrop-blur md:hidden">
         <div>
           <p className="text-[10px] tracking-[0.2em] text-ink-soft uppercase">Meli &amp; Kev</p>
-          <p className="font-display text-lg leading-tight">10.10.2026</p>
+          <p className="font-display font-medium text-lg leading-tight">10.10.2026</p>
         </div>
         <button
           aria-label="Abrir menú"
@@ -81,7 +81,7 @@ export function Sidebar() {
             <div className="flex items-center justify-between px-5 pt-6 pb-2">
               <div>
                 <p className="text-[11px] tracking-[0.2em] text-ink-soft uppercase">Meli &amp; Kev</p>
-                <p className="font-display text-xl">10.10.2026</p>
+                <p className="font-display font-medium text-xl">10.10.2026</p>
               </div>
               <button aria-label="Cerrar menú" onClick={() => setOpen(false)} className="p-2 text-ink-soft">
                 ✕
@@ -100,7 +100,7 @@ export function Sidebar() {
       )}
 
       {/* Desktop sidebar */}
-      <aside className="fixed inset-y-0 left-0 hidden w-64 flex-col border-r border-border bg-white/40 md:flex">
+      <aside className="fixed inset-y-0 left-0 hidden w-64 flex-col border-r border-border bg-surface/40 md:flex">
         <Brand />
         <NavLinks />
         <div className="border-t border-border p-3">

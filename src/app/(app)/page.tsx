@@ -36,7 +36,7 @@ export default async function DashboardPage() {
         />
       </div>
 
-      <div className="mt-6 rounded-2xl border border-border bg-white p-5 shadow-sm">
+      <div className="mt-6 rounded-2xl border border-border bg-surface p-5 shadow-sm">
         <p className="text-xs font-medium tracking-wide text-ink-soft uppercase">Próximos vencimientos</p>
         {data.proximosVencimientos.length === 0 ? (
           <p className="mt-3 text-sm text-ink-soft">No hay vencimientos próximos cargados.</p>

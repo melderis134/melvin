@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const sora = Sora({
+  variable: "--font-heading",
   subsets: ["latin"],
-  axes: ["opsz"],
 });
 
 const inter = Inter({
@@ -24,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${inter.variable} h-full`}>
+    <html lang="es" className={`${sora.variable} ${inter.variable} h-full`}>
       <body className="min-h-full bg-paper text-ink font-sans antialiased">
         {children}
       </body>
