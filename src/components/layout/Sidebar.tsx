@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { NAV_GROUPS } from '@/lib/nav';
 import { logout } from '@/app/login/actions';
+import { CoupleName } from './Amp';
 
 function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
@@ -45,7 +46,7 @@ function NavLinks({ onNavigate }: { onNavigate?: () => void }) {
 function Brand() {
   return (
     <div className="px-5 pt-6 pb-4">
-      <p className="text-[11px] tracking-[0.2em] text-ink-soft uppercase">Meli &amp; Kev</p>
+      <p className="text-[11px] tracking-[0.2em] text-ink-soft uppercase"><CoupleName /></p>
       <p className="mt-0.5 font-display font-medium text-xl">10 de octubre, 2026</p>
     </div>
   );
@@ -59,7 +60,7 @@ export function Sidebar() {
       {/* Top bar mobile */}
       <header className="sticky top-0 z-30 flex items-center justify-between border-b border-border bg-paper/95 px-4 py-3 backdrop-blur md:hidden">
         <div>
-          <p className="text-[10px] tracking-[0.2em] text-ink-soft uppercase">Meli &amp; Kev</p>
+          <p className="text-[10px] tracking-[0.2em] text-ink-soft uppercase"><CoupleName /></p>
           <p className="font-display font-medium text-lg leading-tight">10.10.2026</p>
         </div>
         <button
@@ -80,7 +81,7 @@ export function Sidebar() {
           <div className="absolute inset-y-0 left-0 flex w-72 max-w-[85%] flex-col bg-paper shadow-xl">
             <div className="flex items-center justify-between px-5 pt-6 pb-2">
               <div>
-                <p className="text-[11px] tracking-[0.2em] text-ink-soft uppercase">Meli &amp; Kev</p>
+                <p className="text-[11px] tracking-[0.2em] text-ink-soft uppercase"><CoupleName /></p>
                 <p className="font-display font-medium text-xl">10.10.2026</p>
               </div>
               <button aria-label="Cerrar menú" onClick={() => setOpen(false)} className="p-2 text-ink-soft">

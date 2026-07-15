@@ -1,6 +1,7 @@
 'use client';
 
 import { useActionState } from 'react';
+import { CoupleName } from '@/components/layout/Amp';
 import { login } from './actions';
 
 export default function LoginPage() {
@@ -10,7 +11,9 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <p className="text-xs tracking-[0.2em] text-ink-soft uppercase">Meli &amp; Kev</p>
+          <p className="text-xs tracking-[0.2em] text-ink-soft uppercase">
+            <CoupleName />
+          </p>
           <h1 className="mt-2 font-display font-medium text-3xl">10.10.2026</h1>
         </div>
 
