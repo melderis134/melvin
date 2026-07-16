@@ -54,10 +54,10 @@ https://tu-app.vercel.app/api/sync-rsvp?secret=TU_SYNC_SECRET
 2. Cargá las mismas variables de entorno del paso 2 en **Project Settings → Environment Variables**.
 3. Editá `vercel.json` y reemplazá `REPLACE_WITH_SYNC_SECRET` por el valor real de `SYNC_SECRET` antes de deployar (Vercel llama al cron por URL, no puede leer env vars ahí).
 
-> **Importante sobre el cron:** el plan Hobby de Vercel sólo permite ejecutar Cron Jobs **una vez por día**, no cada 15 minutos (eso requiere plan Pro). `vercel.json` ya está configurado con `*/15 * * * *` tal como se pidió, pero en Hobby Vercel lo va a ajustar/rechazar. Alternativas gratuitas si querés mantener la sincronización cada 15 minutos:
+> **Importante sobre el cron:** el plan Hobby de Vercel sólo permite ejecutar Cron Jobs **una vez por día**, no cada 15 minutos (eso requiere plan Pro). Por eso `vercel.json` quedó configurado con `0 12 * * *` (una vez por día, 12:00 UTC ≈ 9am Argentina). Si en algún momento querés sincronizar más seguido, alternativas gratuitas:
 > - Un cron externo gratuito (ej. [cron-job.org](https://cron-job.org)) que pegue a la URL de arriba cada 15 minutos.
 > - Un GitHub Action con `schedule` que haga un `curl` al endpoint.
-> - Resignarte a la sincronización diaria del cron nativo de Vercel.
+> - Mientras tanto, también podés pegarle a la URL manualmente (o desde el buscador) cuando quieras forzar una sincronización.
 
 ## 6. Estructura
 
