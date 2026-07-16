@@ -21,7 +21,7 @@ const CATEGORIA_OPTIONS = [
   'Otros',
 ];
 
-const QUIEN_PAGA_OPTIONS = ['Novios', 'Familia de Meli', 'Familia de Kev', 'Otros'];
+const QUIEN_PAGA_OPTIONS = ['Novios', 'Familia de Mel', 'Familia de Kev', 'Otros'];
 const ESTADO_OPTIONS = ['No pagado', 'Seña', 'Segundo pago', 'Pagado completo'];
 
 const columns: ColumnDef<PresupuestoRow>[] = [

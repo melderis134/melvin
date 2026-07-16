@@ -1,4 +1,4 @@
--- Boda Meli & Kev — esquema inicial
+-- Boda Mel & Kev — esquema inicial
 create extension if not exists pgcrypto;
 create extension if not exists unaccent;
 
@@ -16,7 +16,7 @@ create table presupuesto (
   nombre text not null,
   categoria text check (categoria in ('Salón','Catering','Fotografía','Música','Decoración','Souvenirs','Invitaciones','Proveedores varios','Hospedaje/Transporte','Outfits','Ceremonia','Civil','Otros')),
   costo numeric,
-  quien_paga text check (quien_paga in ('Novios','Familia de Meli','Familia de Kev','Otros')),
+  quien_paga text check (quien_paga in ('Novios','Familia de Mel','Familia de Kev','Otros')),
   vencimiento date,
   estado text check (estado in ('No pagado','Seña','Segundo pago','Pagado completo')) default 'No pagado',
   notas text,

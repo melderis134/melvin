@@ -2,7 +2,7 @@
 
 export type EstadoPago = 'No pagado' | 'Seña' | 'Segundo pago' | 'Pagado completo';
 export type EstadoSimple = 'Pendiente' | 'En progreso' | 'Hecho';
-export type QuienPaga = 'Novios' | 'Familia de Meli' | 'Familia de Kev' | 'Otros';
+export type QuienPaga = 'Novios' | 'Familia de Mel' | 'Familia de Kev' | 'Otros';
 
 export type CategoriaPresupuesto =
   | 'Salón' | 'Catering' | 'Fotografía' | 'Música' | 'Decoración' | 'Souvenirs'
