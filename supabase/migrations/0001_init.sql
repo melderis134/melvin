@@ -2,6 +2,14 @@
 create extension if not exists pgcrypto;
 create extension if not exists unaccent;
 
+-- unaccent() viene marcada STABLE en Postgres, y las columnas generadas
+-- exigen una expresión IMMUTABLE. Este wrapper la fuerza a IMMUTABLE
+-- (en la práctica el comportamiento de unaccent no cambia entre llamadas).
+create or replace function immutable_unaccent(text)
+returns text as $$
+  select unaccent('unaccent', $1)
+$$ language sql immutable;
+
 -- Presupuesto general
 create table presupuesto (
   id uuid default gen_random_uuid() primary key,
@@ -144,7 +152,7 @@ create table invitados (
   id uuid default gen_random_uuid() primary key,
   nombre_apellido text not null,
   nombre_normalizado text generated always as (
-    lower(regexp_replace(unaccent(nombre_apellido), '\s+', ' ', 'g'))
+    lower(regexp_replace(immutable_unaccent(nombre_apellido), '\s+', ' ', 'g'))
   ) stored,
   grupo text, -- para agrupar "+1" bajo la misma invitación
   estado text check (estado in ('Invitado','Confirmado','No asiste')) default 'Invitado',
